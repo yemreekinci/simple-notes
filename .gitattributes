@@ -10,37 +10,31 @@
 # ==========================
 *.dart linguist-language=Dart
 pubspec.yaml linguist-language=Dart
-*.yaml linguist-language=Dart
 
 # ==========================
-# Ignore all generated/plugin files (C++, Swift, etc.)
+# Ignore all other files / generated files / platform-specific
 # ==========================
-frontend/simplenotes_flutter/**/generated_plugin_registrant.* linguist-vendored
-frontend/simplenotes_flutter/**/generated_plugins.* linguist-vendored
-frontend/simplenotes_flutter/**/Flutter/GeneratedPluginRegistrant.swift linguist-vendored
-
-# ==========================
-# Ignore build, metadata, lock, IDE files
-# ==========================
-frontend/simplenotes_flutter/.metadata linguist-vendored
+# Flutter generated / tool / build
 frontend/simplenotes_flutter/.dart_tool/** linguist-vendored
 frontend/simplenotes_flutter/build/** linguist-vendored
+frontend/simplenotes_flutter/.metadata linguist-vendored
 *.lock linguist-vendored
 *.vs/** linguist-vendored
 *.idea/** linguist-vendored
 
-# ==========================
-# Ignore all C/C++/CMake files
-# ==========================
-frontend/simplenotes_flutter/**/*.cc linguist-vendored
-frontend/simplenotes_flutter/**/*.h linguist-vendored
-frontend/simplenotes_flutter/**/*.c linguist-vendored
-frontend/simplenotes_flutter/**/*.cmake linguist-vendored
-frontend/simplenotes_flutter/**/CMakeLists.txt linguist-vendored
-
-# ==========================
-# Ignore other platform-specific generated files
-# ==========================
+# Ignore platform-specific and native files
 frontend/simplenotes_flutter/macos/** linguist-vendored
 frontend/simplenotes_flutter/linux/** linguist-vendored
 frontend/simplenotes_flutter/windows/** linguist-vendored
+frontend/simplenotes_flutter/ios/** linguist-vendored
+frontend/simplenotes_flutter/android/**/generated/** linguist-vendored
+
+# Ignore C/C++/CMake files (Flutter içinde oluşuyor olabilir)
+**/*.cc linguist-vendored
+**/*.c linguist-vendored
+**/*.h linguist-vendored
+**/*.cmake linguist-vendored
+**/CMakeLists.txt linguist-vendored
+
+# Ignore Swift files
+**/*.swift linguist-vendored
